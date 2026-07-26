@@ -1,15 +1,13 @@
 %define upstream_name    Imager-File-PNG
-%define upstream_version 1.002
-
 Name:       perl-%{upstream_name}
-Version:    %{upstream_version}
-Release:    1
+Version:    1.002
+Release:    2
 
 Summary:    Check that a library is available
 License:    GPL+ or Artistic
 Group:      Development/Perl
 Url:        https://github.com/tonycoz/imager
-Source0:    https://cpan.metacpan.org/authors/id/T/TO/TONYC/Imager-File-PNG-%{upstream_version}.tar.gz
+Source0:    https://cpan.metacpan.org/authors/id/T/TO/TONYC/Imager-File-PNG-%{version}.tar.gz
 
 BuildRequires:	make
 BuildRequires: perl(Imager)
@@ -20,7 +18,7 @@ BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}
 Imager's PNG support is documented in the Imager::Files manpage.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
